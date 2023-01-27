@@ -1,0 +1,14 @@
+INSERT INTO public.user_type(
+	ut_id, ut_name)
+	VALUES (1, 'Admin');
+INSERT INTO public.user_type(
+	ut_id, ut_name)
+	VALUES (2, 'Cliente');
+	
+INSERT INTO public.mpuser(
+	u_id, u_name, u_password, ut_id)
+	VALUES (3, 'Franco', 'Password1234Heya', 1);
+	COMMIT;
+	
+SELECT u_id, u_name, u_password, ut_id
+	FROM public.mpuser;
